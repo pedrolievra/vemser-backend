@@ -7,6 +7,7 @@ public class Exercicio7 {
 
         a = b;
         b = a;
+
         System.out.println("a = " + a + "   b = " + b);
     }
 }

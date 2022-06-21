@@ -16,7 +16,6 @@ public class ex7 {
                 }
             }
         }
-
         System.out.println("Há " + maiorQueDez + " valores maior que 10 na matriz");
     }
 }

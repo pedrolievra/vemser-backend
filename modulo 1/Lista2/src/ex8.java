@@ -8,7 +8,7 @@ public class ex8 {
         int[][] alunos = new int[linhas][coluna];
 
         for(int i = 0; i < linhas; i++){
-            System.out.print("Digite as informações do" + (i+1) + "° aluno");
+            System.out.print("Digite as informações do " + (i+1) + "° aluno: ");
             for(int j = 0; j < (coluna - 1); j++){
                 if(j == 0){
                     System.out.print("Número de Matrícula: ");
@@ -35,7 +35,7 @@ public class ex8 {
         }
         double mediaNotasFinais = (double) somaDasNotas / linhas;
         System.out.print("Matrícula com a maior nota: " + matriculaNerd);
-        System.out.println("Nota: " + maiorNota);
+        System.out.println(" | Nota: " + maiorNota);
         System.out.print("Média das notas finais: " + mediaNotasFinais);
     }
 }

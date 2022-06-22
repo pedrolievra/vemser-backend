@@ -21,5 +21,7 @@ public class Exercicio2 {
         if (media >= 7 && media <= 10) {
             System.out.println("Aprovado");
         }
+
+        System.out.println("Média: " + media);
     }
 }

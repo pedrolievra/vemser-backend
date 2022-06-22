@@ -5,7 +5,6 @@ public class ex4 {
         Scanner sc = new Scanner(System.in);
 
         int[] numeros = new int[3];
-        int posicao = 1;
 
         System.out.println("Digite os numeros:");
         numeros[0] = sc.nextInt();
@@ -15,14 +14,15 @@ public class ex4 {
         numeros[2] = sc.nextInt();
         sc.nextLine();
 
-        int menorNumeros = numeros[0];
+        int menorNumero = numeros[0];
+        int posicao = 1;
 
-        if (menorNumeros > numeros[1]) {
-            menorNumeros = numeros[1];
+        if (menorNumero > numeros[1]) {
+            menorNumero = numeros[1];
             posicao = 2;
         }
-        if (menorNumeros > numeros[2]) {
-            menorNumeros = numeros[2];
+        if (menorNumero > numeros[2]) {
+            menorNumero = numeros[2];
             posicao = 3;
         }
 

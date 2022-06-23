@@ -3,29 +3,24 @@ import java.util.Scanner;
 public class ex4 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
         int[] numeros = new int[3];
-
-        System.out.println("Digite os numeros:");
-        numeros[0] = sc.nextInt();
-        sc.nextLine();
-        numeros[1] = sc.nextInt();
-        sc.nextLine();
-        numeros[2] = sc.nextInt();
-        sc.nextLine();
-
-        int menorNumero = numeros[0];
+        int i = 0;
         int posicao = 1;
+        int menorNumero = 0;
 
-        if (menorNumero > numeros[1]) {
-            menorNumero = numeros[1];
-            posicao = 2;
-        }
-        if (menorNumero > numeros[2]) {
-            menorNumero = numeros[2];
-            posicao = 3;
-        }
+        System.out.println("==Digite três números abaixo==");
 
+        for (i=0; i< numeros.length; i++) {
+            numeros[i] = sc.nextInt();
+            if (i == 0) {
+                menorNumero = numeros[i];
+            }
+            if (numeros[i] < menorNumero) {
+                menorNumero = numeros[i];
+                posicao = i+1;
+            }
+        }
         System.out.println("A posição do menor número é " + posicao);
-    }
+        System.out.println("Menor número: " + menorNumero);
+        }
 }

@@ -12,13 +12,14 @@ public class ContaPagamento extends Conta implements Impressao {
             setSaldo(getSaldo()-TAXA_DE_SAQUE-valor);
             return true;
         }
+        System.out.println("Transferencia não realizada, valor invalido");
         return false;
     }
 
     @Override
     public void imprimir() {
         getCliente().imprimirCliente();
-        System.out.println("Numero da Conta: "+ getNumeroConta() +" Agencia: "+getAgencia()+"Saldo:"+getSaldo());
+        System.out.println("\nda Conta: "+ getNumeroConta() +"\nAgencia: "+getAgencia()+"\nSaldo:"+getSaldo());
     }
 
 }

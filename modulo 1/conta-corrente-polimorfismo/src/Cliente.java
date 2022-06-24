@@ -58,7 +58,7 @@ public class Cliente {
     }
 
     public void imprimirCliente() {
-        System.out.println("Nome: " + nome + " Cpf: " + cpf);
+        System.out.println("Nome: " + nome + "\nCpf: " + cpf);
         imprimirContatos();
         imprmirEnderecos();
     }

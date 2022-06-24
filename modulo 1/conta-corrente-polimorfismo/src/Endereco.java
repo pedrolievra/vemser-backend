@@ -86,11 +86,14 @@ public class Endereco {
     public void imprimirEndereco() {
         if (tipo == 1) {
 
-            System.out.println("Tipo: Comercial Logradouro: " + logradouro + " Numero: " + numero + " Complemento: " + complemento + "Cep: " + cep + "Cidade: " + cidade + "Estado: " + estado + "Pais: " + pais);
+            System.out.println("\nTipo: Comercial\nLogradouro: " + logradouro + "\nNumero: " + numero + "\nComplemento: " + complemento + "\nCep: " + cep + "\nCidade: " + cidade + "\nEstado: " + estado + "\nPais: " + pais);
         }
         if (tipo == 2) {
-            System.out.println("Tipo: Residencial Logradouro: " + logradouro + " Numero: " + numero + " Complemento: " + complemento + " Cep: " + cep + " Cidade: " + cidade + " Estado: " + estado + " Pais: " + pais);
+            System.out.println("\nTipo: Residencial\nLogradouro: " + logradouro + "\nNumero: " + numero + "\nComplemento: " + complemento + "\n Cep: " + cep + "\nCidade: " + cidade + "\nEstado: " + estado + "\nPais: " + pais);
 
+        }
+        else if(tipo!=1 && tipo!=2){
+            System.out.println("Tipo inválido, inserir novamente");
         }
     }
 

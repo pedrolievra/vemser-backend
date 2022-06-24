@@ -58,8 +58,7 @@ public class ContaCorrente extends Conta implements Impressao {
             System.out.println("Tranferencia realizada com cheque");
             return true;
         }
-        System.out.println("Tranferencia nao realizada");
-
+        System.out.println("Tranferencia nao realizada: Valor inválido");
         return false;
     }
 
@@ -68,6 +67,6 @@ public class ContaCorrente extends Conta implements Impressao {
     public void imprimir() {
         System.out.println("Cliente: ");
         getCliente().imprimirCliente();
-        System.out.println("Numero da Conta: " + getNumeroConta() + " Agencia: " + getAgencia() + " Saldo:" + getSaldo() + " Cheque Especial: " + chequeEspecial);
+        System.out.println("\nNumero da Conta: " + getNumeroConta() + "\nAgencia: " + getAgencia() + "\nSaldo:" + getSaldo() + "\nCheque Especial: " + chequeEspecial);
     }
 }

@@ -46,8 +46,11 @@ public abstract class  Conta implements Movimentacao{
     @Override
     public boolean depositar(Double valor) {
         if(valor>0){
-            this.saldo += saldo +valor;
+            setSaldo(getSaldo()+valor);
+            System.out.println("Deposito realizado com sucesso");
+            return true;
         }
+        System.out.println("Deposito nao foi realizado");
         return false;
     }
 

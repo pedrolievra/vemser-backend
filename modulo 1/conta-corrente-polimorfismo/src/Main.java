@@ -14,29 +14,29 @@ public class Main {
         ContaPagamento contaPagamentoMatheus    = new ContaPagamento(matheus, "92735", "Itau", 400.0);
         ContaPoupanca contaPoupancaPedro = new ContaPoupanca(pedro, "21456", "Bradesco", 230.00);
 
-        /*
+
         contaPagamentoMatheus.sacar(100.00);
         contaCorrenteMatheus.sacar(100.00);
         contaCorrenteMatheus.imprimir();
         contaPagamentoMatheus.imprimir();
-        */
+
 
         contaPoupancaPedro.sacar(600.00);
         contaPoupancaPedro.imprimir();
 
-        /*
+
         contaPagamentoMatheus.transferir(contaCorrenteMatheus,100.0);
         contaCorrenteMatheus.imprimir();
         contaPagamentoMatheus.imprimir();
-        */
+
         contaPoupancaPedro.sacar(0.0);
         contaPoupancaPedro.imprimir();
-        /*
+
         contaPagamentoMatheus.depositar(100.0);
         contaPagamentoMatheus.imprimir();
         contaCorrenteMatheus.depositar(100.0);
         contaCorrenteMatheus.imprimir();
 
-         */
+
     }
 }

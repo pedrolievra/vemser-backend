@@ -34,6 +34,11 @@ public class Contato {
     }
 
     void imprimirContato() {
-        System.out.println("Descricao do contato: " + descricao + " Telefone do contato: " + telefone + "Tipo do contato" + tipo);
+        if(tipo==1){
+            System.out.println("-CONTATO-\n\nTipo: Residencial\nDescricao do contato: " + descricao + "\nTelefone do contato: " + telefone + "\n");
+        }
+        if(tipo==2){
+            System.out.println("-CONTATO-\n\nTipo: Comercial\nDescricao do contato: " + descricao + "\nTelefone do contato: " + telefone +   "\n");
+        }
     }
 }

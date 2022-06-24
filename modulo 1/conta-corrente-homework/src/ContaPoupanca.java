@@ -1,4 +1,4 @@
-public class ContaPoupanca extends Conta{
+public class ContaPoupanca extends Conta implements Movimentacao{
     static final double JUROS_MENSAL = 1.01;
 
     public ContaPoupanca(Cliente cliente, String numeroDaConta, int agencia, double saldo){
@@ -6,6 +6,12 @@ public class ContaPoupanca extends Conta{
     }
 
     public void creditarTaxa(){
-        setSaldo(getSaldo()*JUROS_MENSAL);
+       double saldoComJuros = this.getSaldo() ;
+        saldoComJuros *=JUROS_MENSAL;
+    }
+
+    @Override
+    public void imprimir() {
+
     }
 }

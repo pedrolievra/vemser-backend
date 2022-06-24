@@ -2,7 +2,7 @@ import javax.imageio.plugins.tiff.TIFFTagSet;
 
 public class Endereco
 {
-    private int tipo;
+    private Integer tipo;
     private String logradouro;
     private int numero = 0;
     private String complemento;
@@ -11,7 +11,7 @@ public class Endereco
     private String estado;
     private String pais;
 
-    public Endereco(int tipo, String logradouro, Integer numero, String complemento, String cep,String cidade, String estado, String pais){
+    public Endereco(Integer tipo, String logradouro, int numero, String complemento, String cep,String cidade, String estado, String pais){
         this.numero = numero;
         this.tipo = tipo;
         this.logradouro = logradouro;

@@ -83,8 +83,14 @@ public class Endereco {
         this.pais = pais;
     }
 
-    public void  imprimirEndereco(){
-        System.out.println("Tipo"+tipo+"Logradouro: "+logradouro+" Numero: "+numero+"Complemento: "+complemento+"Cep: "+cep+"Cidade: "+cidade+"Estado: "+estado+"Pais: "+pais);
+    public void imprimirEndereco() {
+        if (tipo == 1) {
+            System.out.println("-ENDERECO-\n\nTipo: Comercial \nLogradouro: " + logradouro + "\nNumero: " + numero + "\nComplemento: " + complemento + "\nCep: " + cep + "\nCidade: " + cidade + "\nEstado: " + estado + "\nPais: " + pais+"\n");
+        }
+        if (tipo == 2) {
+            System.out.println("-ENDERECO-\n\nTipo: Residencial \nLogradouro: " + logradouro + "\nNumero: " + numero + "\nComplemento: " + complemento + "\nCep: " + cep + "\nCidade: " + cidade + "\nEstado: " + estado + "\nPais: " + pais+"\n");
+
+        }
     }
 
 }

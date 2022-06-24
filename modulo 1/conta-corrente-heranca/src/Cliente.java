@@ -49,14 +49,16 @@ public class Cliente {
 
 
     public void imprimirContatos(){
-        for (int i=0; i <= contatos.length;i++) contatos[i].imprimirContato();
+        for (Contato contato : contatos) contato.imprimirContato();
     }
 
     public void imprmirEnderecos(){
-        for (int i=0; i <= enderecos.length;i++) enderecos[i].imprimirEndereco();
+        for (Endereco endereco : enderecos) endereco.imprimirEndereco();
     }
 
     public void imprimirCliente() {
-        System.out.println("Nome: "+nome+" Cpf: "+cpf);
+        System.out.println("\nNome: "+nome+"\nCpf: "+cpf);
+        imprimirContatos();
+        imprmirEnderecos();
     }
 }

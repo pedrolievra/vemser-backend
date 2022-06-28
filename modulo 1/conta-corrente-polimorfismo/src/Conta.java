@@ -1,17 +1,45 @@
-public abstract class  Conta implements Movimentacao{
+public class Conta implements Movimentacao{
     private Cliente cliente;
     private String numeroConta;
     private String agencia;
     private double saldo;
 
-    public Conta(Cliente cliente, String numeroConta, String agencia, Double saldo) {
+    public Conta(Cliente cliente, String numeroConta, String agencia, double saldo) {
         this.cliente = cliente;
         this.numeroConta = numeroConta;
         this.agencia = agencia;
         this.saldo = saldo;
     }
 
+    public boolean sacar(double valorSaque) {
+        if (valorSaque <= this.getSaldo() && valorSaque > 0) {
+            this.setSaldo(this.getSaldo() - valorSaque);
+            return true;
+        }
+        return false;
+    }
+    @Override
+    public boolean depositar(double valor) {
+        if(valor>0){
+            this.setSaldo(this.getSaldo() + valor);
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public boolean transferir(Conta conta, Double valorTransferencia) {
+        if(this.sacar(valorTransferencia)){
+            conta.depositar(valorTransferencia);
+            System.out.println("Foi possivel realizar a transferencia ");
+            return true;
+        }
+        System.out.println("Nao foi possivel realizar a transferencia ");
+        return false;
+    }
+
     public Cliente getCliente() {
+
         return cliente;
     }
 
@@ -30,7 +58,6 @@ public abstract class  Conta implements Movimentacao{
     public String getAgencia() {
         return agencia;
     }
-
     public void setAgencia(String agencia) {
         this.agencia = agencia;
     }
@@ -41,32 +68,5 @@ public abstract class  Conta implements Movimentacao{
 
     public void setSaldo(double saldo) {
         this.saldo = saldo;
-    }
-
-    @Override
-    public void depositar(Double valor) {
-        if(valor>0){
-            setSaldo(getSaldo()+valor);
-            System.out.println("Deposito realizado com sucesso");
-            return;
-        }
-        System.out.println("Deposito nao foi realizado");
-    }
-
-    @Override
-    public void sacar(Double valor) {
-        if(valor>0 && getSaldo()-valor >0 ){
-            setSaldo(getSaldo()-valor);
-            System.out.println("Foi possivel sacar sem cheque especial");
-        }
-    }
-
-    @Override
-    public void transferir(Conta conta, Double valor) {
-        System.out.println("Tranferencia realizada sem cheque");
-        if (valor>0 && getSaldo()-valor >0 ){
-            this.sacar(getSaldo()-valor);
-            conta.depositar(conta.getSaldo()+valor);
-        }
     }
 }

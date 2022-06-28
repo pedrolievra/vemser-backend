@@ -1,19 +1,41 @@
 import java.util.ArrayList;
 
 public class Cliente {
-    private String nome;
-    private String cpf;
-    private ArrayList<Contato> contatos = new ArrayList<>(); //reduntante inserir new ArrayList
-    private ArrayList<Endereco> enderecos = new ArrayList<>();
+    public String nome;
+    public String cpf;
+    private ArrayList<Enderecos> enderecos = new ArrayList<>();
+    private ArrayList<Contato> contatos = new ArrayList<>();
 
-    public Cliente(String nome, String cpf, Contato contatoA, Contato contatoB, Endereco enderecoA, Endereco enderecoB) {
+    public Cliente(String nome, String cpf, Contato contatos1,
+                   Contato contatos2, Enderecos endereco1, Enderecos endereco2) {
         this.nome = nome;
         this.cpf = cpf;
-        contatos.add(contatoA);
-        contatos.add(contatoB);
+        this.contatos.add(contatos1);
+        this.contatos.add(contatos2);
+        this.enderecos.add(endereco1);
+        this.enderecos.add(endereco2);
+    }
 
-        enderecos.add(enderecoA);
-        enderecos.add(enderecoB);
+    public void imprimirCliente() {
+        System.out.println("Cliente: " + this.nome + "\nCPF: " + this.cpf);
+    }
+
+    public void imprimirEnderecos() {
+        for (int i = 0; i < enderecos.size(); i++) {
+            if (enderecos.get(i) != null) {
+                System.out.println("\n-ENDERECO-");
+                enderecos.get(i).imprimirEndereco();
+            }
+            }
+        }
+
+    public void imprimirContatos () {
+        for (int i = 0; i < contatos.size(); i++) {
+            if (contatos.get(i) != null) {
+                System.out.println("\n-CONTATO-");
+                contatos.get(i).imprimirContato();
+            }
+        }
     }
 
     public String getNome() {
@@ -32,6 +54,14 @@ public class Cliente {
         this.cpf = cpf;
     }
 
+    public ArrayList<Enderecos> getEnderecos() {
+        return enderecos;
+    }
+
+    public void setEnderecos(ArrayList<Enderecos> enderecos) {
+        this.enderecos = enderecos;
+    }
+
     public ArrayList<Contato> getContatos() {
         return contatos;
     }
@@ -39,27 +69,5 @@ public class Cliente {
     public void setContatos(ArrayList<Contato> contatos) {
         this.contatos = contatos;
     }
-
-    public ArrayList<Endereco> getEnderecos() {
-        return enderecos;
-    }
-
-    public void setEnderecos(ArrayList<Endereco> enderecos) {
-        this.enderecos = enderecos;
-    }
-
-
-    public void imprimirContatos() {
-        for (Contato contato : contatos) contato.imprimirContato();
-    }
-
-    public void imprmirEnderecos() {
-        for (Endereco endereco : enderecos) endereco.imprimirEndereco();
-    }
-
-    public void imprimirCliente() {
-        System.out.println("Nome: " + nome + "\nCpf: " + cpf);
-        imprimirContatos();
-        imprmirEnderecos();
-    }
 }
+

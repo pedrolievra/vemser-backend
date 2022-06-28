@@ -1,6 +1,5 @@
 public interface Movimentacao {
-
-    void sacar(Double valor);
-    void depositar(Double valor);
-    void transferir(Conta conta, Double valor);
+    boolean sacar(double valor);
+    boolean depositar(double valor);
+    boolean transferir(Conta conta, Double valor);
 }

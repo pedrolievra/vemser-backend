@@ -1,45 +1,39 @@
-public class ContaCorrente extends Conta implements Impressao {
+public class ContaCorrente extends Conta implements Impressao{
+
     private Double chequeEspecial;
 
-    public ContaCorrente(Cliente cliente, String numeroConta, String agencia, Double saldo, Double chequeEspecial) {
-        super(cliente, numeroConta, agencia, saldo);
+    public ContaCorrente(Cliente cliente, String agencia, String numeroConta, Double saldo, Double chequeEspecial){
+        super(cliente, agencia, numeroConta, saldo);
+        this.chequeEspecial = chequeEspecial;
+    }
+    public double retornarSaldoComChequeEspecial(){
+        return this.getSaldo() + this.chequeEspecial;
+    }
+
+    @Override
+    public boolean sacar(double valor) {
+        if (valor <= this.retornarSaldoComChequeEspecial() && valor>0) {
+            this.setSaldo(this.getSaldo() - valor);
+            return true;
+        }
+        return false;
+    }
+
+    public void setChequeEspecial(double chequeEspecial) {
         this.chequeEspecial = chequeEspecial;
     }
 
-    public double retornarSaldoComChequeEspecial() {
-        if (getSaldo() >= 0) {
-            return chequeEspecial;
-        }
-        return this.getSaldo() + chequeEspecial;
-    }
-
-    public void setChequeEspecial(Double valor) {
-        if (valor > 0) {
-            chequeEspecial = valor;
-        }
-    }
-
-
-    public void sacar(Double valor) {
-        if (valor > 0 && getSaldo() - valor > 0) {
-            setSaldo(getSaldo() - valor);
-            System.out.println("Foi possivel sacar sem cheque especial");
-        }
-        else if (valor > 0 && retornarSaldoComChequeEspecial() - valor > 0) {
-            setSaldo(getSaldo() - valor);
-            setChequeEspecial(getSaldo() - valor);
-            System.out.println("Saque realizado com cheque especial");
-        }
-        else {
-            System.out.println("Nao foi possivel sacar mesmo com a utilizacao do cheque especial");
-        }
-    }
-
-
     @Override
     public void imprimir() {
-        System.out.println("Cliente: ");
-        getCliente().imprimirCliente();
-        System.out.println("\nNumero da Conta: " + getNumeroConta() + "\nAgencia: " + getAgencia() + "\nSaldo:" + getSaldo() + "\nCheque Especial: " + chequeEspecial);
+        System.out.println("Cliente:");
+        this.getCliente().imprimirCliente();
+        System.out.println("Dados da Conta Corrente");
+        System.out.println("Agência: " + this.getAgencia() + "\nConta: " + this.getNumeroConta()
+                + "\nSaldo da conta: "+ this.getSaldo() + "\nCheque Especial: " + this.chequeEspecial);
+        System.out.println("");
+        this.getCliente().imprimirContatos();
+        this.getCliente().imprimirEnderecos();
     }
 }
+
+

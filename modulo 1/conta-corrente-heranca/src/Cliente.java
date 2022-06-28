@@ -1,8 +1,8 @@
 public class Cliente {
-    public String nome;
-    public String cpf;
-    public Contato[] contatos = new Contato[2];
-    public Enderecos[] enderecos = new Enderecos[2];
+    private String nome;
+    private String cpf;
+    private Contato[] contatos = new Contato[2];
+    private Enderecos[] enderecos = new Enderecos[2];
 
     public Cliente(String nome, String cpf, Contato contatos1,
                    Contato contatos2, Enderecos endereco1, Enderecos endereco2) {

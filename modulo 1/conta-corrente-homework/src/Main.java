@@ -135,8 +135,8 @@ public class Main {
 
         //metodos validos
 
-        contaPedro.depositar(500);
-        contaMatheus.depositar(400);
+        contaPedro.depositar(20);
+        contaMatheus.depositar(50);
         System.out.println("\nCONTAS APOS DEPOSITO:");
         contaPedro.imprimirConta();
         contaPedro.retornoSaldoComChequeEspecial();

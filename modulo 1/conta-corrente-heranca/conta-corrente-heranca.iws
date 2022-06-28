@@ -2,57 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0e07cab-4eb2-4d7d-ae3e-bfabb24205d7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/conta-corrente-heranca/Cliente.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/conta-corrente-heranca/Cliente.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/conta-corrente-heranca/Conta.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/conta-corrente-heranca/Conta.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/conta-corrente-heranca/ContaCorrente.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/conta-corrente-heranca/ContaCorrente.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/conta-corrente-heranca/ContaPoupanca.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/conta-corrente-heranca/ContaPoupanca.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/conta-corrente-heranca/Contato.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/conta-corrente-heranca/Contato.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/conta-corrente-heranca/Endereco.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/conta-corrente-heranca/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/conta-corrente-heranca/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/conta-corrente-heranca/Movimentacao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/conta-corrente-heranca/Movimentacao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conta-corrente-heranca.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/conta-corrente-heranca.ipr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conta-corrente-heranca.iws" beforeDir="false" afterPath="$PROJECT_DIR$/conta-corrente-heranca.iws" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Conta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Conta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ContaCorrente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ContaCorrente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ContaPoupanca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ContaPoupanca.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Contato.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Contato.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Endereco.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Movimentacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movimentacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conta-corrente-homework/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conta-corrente-homework/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conta-corrente-homework/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conta-corrente-homework/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conta-corrente-homework/out/production/conta-corrente-homework/Cliente.class" beforeDir="false" afterPath="$PROJECT_DIR$/../conta-corrente-homework/out/production/conta-corrente-homework/Cliente.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conta-corrente-homework/out/production/conta-corrente-homework/Conta.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../conta-corrente-homework/conta-corrente-homework.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/../conta-corrente-homework/conta-corrente-homework.ipr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../conta-corrente-homework/conta-corrente-homework.iws" beforeDir="false" afterPath="$PROJECT_DIR$/../conta-corrente-homework/conta-corrente-homework.iws" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../conta-corrente-homework/out/production/conta-corrente-homework/ContaCorrente.class" beforeDir="false" afterPath="$PROJECT_DIR$/../conta-corrente-homework/out/production/conta-corrente-homework/ContaCorrente.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conta-corrente-homework/out/production/conta-corrente-homework/ContaPoupanca.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conta-corrente-homework/out/production/conta-corrente-homework/Contato.class" beforeDir="false" afterPath="$PROJECT_DIR$/../conta-corrente-homework/out/production/conta-corrente-homework/Contato.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conta-corrente-homework/out/production/conta-corrente-homework/Endereco.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../conta-corrente-homework/out/production/conta-corrente-homework/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../conta-corrente-homework/out/production/conta-corrente-homework/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../conta-corrente-homework/src/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/../conta-corrente-homework/src/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conta-corrente-homework/src/Conta.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../conta-corrente-homework/src/ContaCorrente.java" beforeDir="false" afterPath="$PROJECT_DIR$/../conta-corrente-homework/src/ContaCorrente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conta-corrente-homework/src/Contato.java" beforeDir="false" afterPath="$PROJECT_DIR$/../conta-corrente-homework/src/Contato.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conta-corrente-homework/src/Endereco.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../conta-corrente-homework/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../conta-corrente-homework/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conta-corrente-polimorfismo/out/production/conta-corrente-polimorfismo/Conta.class" beforeDir="false" afterPath="$PROJECT_DIR$/../conta-corrente-polimorfismo/out/production/conta-corrente-polimorfismo/Conta.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conta-corrente-polimorfismo/out/production/conta-corrente-polimorfismo/ContaCorrente.class" beforeDir="false" afterPath="$PROJECT_DIR$/../conta-corrente-polimorfismo/out/production/conta-corrente-polimorfismo/ContaCorrente.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conta-corrente-polimorfismo/out/production/conta-corrente-polimorfismo/ContaPagamento.class" beforeDir="false" afterPath="$PROJECT_DIR$/../conta-corrente-polimorfismo/out/production/conta-corrente-polimorfismo/ContaPagamento.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conta-corrente-polimorfismo/out/production/conta-corrente-polimorfismo/ContaPoupanca.class" beforeDir="false" afterPath="$PROJECT_DIR$/../conta-corrente-polimorfismo/out/production/conta-corrente-polimorfismo/ContaPoupanca.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conta-corrente-polimorfismo/out/production/conta-corrente-polimorfismo/Contato.class" beforeDir="false" afterPath="$PROJECT_DIR$/../conta-corrente-polimorfismo/out/production/conta-corrente-polimorfismo/Contato.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conta-corrente-polimorfismo/out/production/conta-corrente-polimorfismo/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../conta-corrente-polimorfismo/out/production/conta-corrente-polimorfismo/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conta-corrente-polimorfismo/src/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/../conta-corrente-polimorfismo/src/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conta-corrente-polimorfismo/src/Conta.java" beforeDir="false" afterPath="$PROJECT_DIR$/../conta-corrente-polimorfismo/src/Conta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conta-corrente-polimorfismo/src/ContaCorrente.java" beforeDir="false" afterPath="$PROJECT_DIR$/../conta-corrente-polimorfismo/src/ContaCorrente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conta-corrente-polimorfismo/src/ContaPagamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/../conta-corrente-polimorfismo/src/ContaPagamento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conta-corrente-polimorfismo/src/ContaPoupanca.java" beforeDir="false" afterPath="$PROJECT_DIR$/../conta-corrente-polimorfismo/src/ContaPoupanca.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conta-corrente-polimorfismo/src/Contato.java" beforeDir="false" afterPath="$PROJECT_DIR$/../conta-corrente-polimorfismo/src/Contato.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conta-corrente-polimorfismo/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../conta-corrente-polimorfismo/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conta-corrente-polimorfismo/src/Movimentacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../conta-corrente-polimorfismo/src/Movimentacao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,6 +52,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">

@@ -35,14 +35,14 @@ public class Contato {
 
     void imprimirContato() {
         if (this.tipo==1.0){
-            System.out.println("Tipo Residencial \n");
+            System.out.println("Tipo Residencial");
         }
         else if (this.tipo==2.0){
-        System.out.println("Tipo Comercial \n");
+        System.out.println("Tipo Comercial");
         }
         else if (tipo!=2.0 && tipo!=1.0){
-            System.out.println("Tipo não compatível \n");
+            System.out.println("Tipo não compatível");
         }
-        System.out.println("\nDescricao do contato: " + descricao + "\nTelefone do contato: " + telefone + "\n");
+        System.out.println("Descricao do contato: " + descricao + "\nTelefone do contato: " + telefone + "\n");
     }
 }

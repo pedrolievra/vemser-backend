@@ -1,42 +1,32 @@
 public class Cliente {
-    private String nome;
-    private String cpf;
-    private Contato[] contatos = new Contato[2];
-    private Endereco[] enderecos = new Endereco[2];
+    public String nome;
+    public String cpf;
+    public Contato[] contatos = new Contato[2];
+    public Enderecos[] enderecos = new Enderecos[2];
 
-    public Cliente(String nome, String cpf, Contato contato, Endereco enderecos){
-        this.contatos[0] = contato;
-        this.enderecos[0] = enderecos;
-        this.contatos[1] = contato;
-        this.enderecos[1] = enderecos;
-        this.cpf = cpf;
-        this.nome = nome;
+    public void imprimirCliente() {
+        System.out.println("\nCliente: " + nome + "\nCPF: " + cpf);
     }
 
-    public Cliente() {
-
-    }
-
-    void imprimirContatos() {
-        for (int i = 0; i <= 1; i++) {
-            System.out.println("Contato "+ (i+1));
-            contatos[i].imprimirContato();
+    public void imprimirEnderecos() {
+        for (int i = 0; i < enderecos.length; i++) {
+            if (enderecos[i] != null) {
+                System.out.println("\n-ENDERECO-");
+                enderecos[i].imprimirEndereco();
+            } else {
+                System.out.println("Endereco " + (i + 1) + " nao esta cadastradp");
+            }
         }
     }
-
-    void imprimirEnderecos(){
-        for(int i = 0; i <= 1 ; i++){
-            System.out.println("Endereço "+ (i+1));
-            enderecos[i].imprimirEndereco();
+        public void imprimirContatos () {
+            for (int i = 0; i < contatos.length; i++) {
+                if (contatos[i] != null) {
+                    System.out.println("\n-CONTATO-");
+                    contatos[i].imprimirContato();
+                } else {
+                    System.out.println("Contato " + (i + 1) + " nao esta cadastrado");
+                }
+            }
         }
     }
-
-    void imprimirCliente(){
-        System.out.println("Nome: " + nome);
-        System.out.println("CPF do cliente: " + cpf);
-    }
-}
-
-
-
 

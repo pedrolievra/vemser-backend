@@ -1,50 +1,18 @@
 public class Contato {
-    private String descricao;
-    private String telefone;
-    private int tipo;
+    public String descricao;
+    public String telefone;
+    public int tipo;
 
-    public Contato(String descricao, String telefone, int tipo){
-        this.tipo = tipo;
-        this.telefone = telefone;
-        this.descricao = descricao;
-    }
-
-    public String getDescricao() {
-        return descricao;
-    }
-
-    public String getTelefone() {
-        return telefone;
-    }
-
-    public int getTipo() {
-        return tipo;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
-
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
-    }
-
-    public void setTipo(int tipo) {
-        this.tipo = tipo;
-    }
-
-    void imprimirContato(){
-        System.out.println("Contato do cliente: " + descricao);
-        System.out.println("Telefone: " + telefone);
+    public void imprimirContato(){
         if(tipo==1){
-            System.out.println("Tipo: Residencial");
+            System.out.println("Tipo Residencial\nTelefone: " + telefone + "\nDescricao: " + descricao);
         }
-        else if (tipo==2){
-            System.out.println("Tipo: Comercial");
+        else if(tipo==2){
+            System.out.println("Tipo Comercial\nTelefone: " + telefone + "\nDescricao: " + descricao);
         }
-        else{
-            System.out.println("Tipo não existente");
+        else {
+            System.out.println("Tipo inválido\nTelefone: " + telefone + "\nDescricao: " + descricao);
+
         }
-        System.out.println(" ");
     }
 }

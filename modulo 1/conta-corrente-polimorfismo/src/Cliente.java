@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Cliente {
     private String nome;
     private String cpf;
-    private ArrayList<Contato> contatos = new ArrayList<>();
+    private ArrayList<Contato> contatos = new ArrayList<>(); //reduntante inserir new ArrayList
     private ArrayList<Endereco> enderecos = new ArrayList<>();
 
     public Cliente(String nome, String cpf, Contato contatoA, Contato contatoB, Endereco enderecoA, Endereco enderecoB) {

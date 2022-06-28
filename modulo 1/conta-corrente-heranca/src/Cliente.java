@@ -1,18 +1,44 @@
 public class Cliente {
-    private String nome;
-    private String cpf;
-    private Contato[] contatos = new Contato[2];
-    private Endereco[] enderecos = new Endereco[2];
+    public String nome;
+    public String cpf;
+    public Contato[] contatos = new Contato[2];
+    public Enderecos[] enderecos = new Enderecos[2];
 
-    public Cliente(String nome, String cpf, Contato contatoA,Contato contatoB, Endereco enderecoA,Endereco enderecoB) {
+    public Cliente(String nome, String cpf, Contato contatos1,
+                   Contato contatos2, Enderecos endereco1, Enderecos endereco2) {
         this.nome = nome;
         this.cpf = cpf;
-        this.contatos[0] = contatoA;
-        this.contatos[1] = contatoA;
-
-        this.enderecos[0] = enderecoA;
-        this.enderecos[1] = enderecoB;
+        this.contatos[0] = contatos1;
+        this.contatos[1] = contatos2;
+        this.enderecos[0] = endereco1;
+        this.enderecos[1] = endereco2;
     }
+
+    public void imprimirCliente() {
+        System.out.println("Cliente: " + nome + "\nCPF: " + cpf);
+    }
+
+    public void imprimirEnderecos() {
+        for (int i = 0; i < enderecos.length; i++) {
+            if (enderecos[i] != null) {
+                System.out.println("\n-ENDERECO-");
+                enderecos[i].imprimirEndereco();
+                System.out.println("");
+            } else {
+                System.out.println("Endereco " + (i + 1) + " nao esta cadastrado");
+            }
+        }
+    }
+        public void imprimirContatos () {
+            for (int i = 0; i < contatos.length; i++) {
+                if (contatos[i] != null) {
+                    System.out.println("\n-CONTATO-");
+                    contatos[i].imprimirContato();
+                } else {
+                    System.out.println("Contato " + (i + 1) + " nao esta cadastrado");
+                }
+            }
+        }
 
     public String getNome() {
         return nome;
@@ -38,27 +64,12 @@ public class Cliente {
         this.contatos = contatos;
     }
 
-    public Endereco[] getEnderecos() {
+    public Enderecos[] getEnderecos() {
         return enderecos;
     }
 
-    public void setEnderecos(Endereco[] enderecos) {
+    public void setEnderecos(Enderecos[] enderecos) {
         this.enderecos = enderecos;
     }
-
-
-
-    public void imprimirContatos(){
-        for (Contato contato : contatos) contato.imprimirContato();
-    }
-
-    public void imprmirEnderecos(){
-        for (Endereco endereco : enderecos) endereco.imprimirEndereco();
-    }
-
-    public void imprimirCliente() {
-        System.out.println("\nNome: "+nome+"\nCpf: "+cpf);
-        imprimirContatos();
-        imprmirEnderecos();
-    }
 }
+

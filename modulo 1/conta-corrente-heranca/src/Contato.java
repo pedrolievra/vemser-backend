@@ -1,12 +1,25 @@
 public class Contato {
-    private String descricao;
-    private String telefone;
-    private Integer tipo;
+    public String descricao;
+    public String telefone;
+    public int tipo;
 
-    public Contato(String descricao, String telefone, Integer tipo) {
+    public Contato(String descricao, String telefone, int tipo) {
         this.descricao = descricao;
         this.telefone = telefone;
         this.tipo = tipo;
+    }
+
+    public void imprimirContato(){
+        if(tipo==1){
+            System.out.println("Tipo Residencial\nTelefone: " + telefone + "\nDescricao: " + descricao);
+        }
+        else if(tipo==2){
+            System.out.println("Tipo Comercial\nTelefone: " + telefone + "\nDescricao: " + descricao);
+        }
+        else {
+            System.out.println("Tipo inválido\nTelefone: " + telefone + "\nDescricao: " + descricao);
+
+        }
     }
 
     public String getDescricao() {
@@ -25,20 +38,11 @@ public class Contato {
         this.telefone = telefone;
     }
 
-    public Integer getTipo() {
+    public int getTipo() {
         return tipo;
     }
 
-    public void setTipo(Integer tipo) {
+    public void setTipo(int tipo) {
         this.tipo = tipo;
-    }
-
-    void imprimirContato() {
-        if(tipo==1){
-            System.out.println("-CONTATO-\n\nTipo: Residencial\nDescricao do contato: " + descricao + "\nTelefone do contato: " + telefone + "\n");
-        }
-        if(tipo==2){
-            System.out.println("-CONTATO-\n\nTipo: Comercial\nDescricao do contato: " + descricao + "\nTelefone do contato: " + telefone +   "\n");
-        }
     }
 }

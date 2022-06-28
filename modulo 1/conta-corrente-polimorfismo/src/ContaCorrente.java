@@ -20,46 +20,19 @@ public class ContaCorrente extends Conta implements Impressao {
     }
 
 
-    public boolean sacar(Double valor) {
+    public void sacar(Double valor) {
         if (valor > 0 && getSaldo() - valor > 0) {
             setSaldo(getSaldo() - valor);
             System.out.println("Foi possivel sacar sem cheque especial");
-            return true;
         }
-        if (valor > 0 && retornarSaldoComChequeEspecial() - valor > 0) {
+        else if (valor > 0 && retornarSaldoComChequeEspecial() - valor > 0) {
             setSaldo(getSaldo() - valor);
             setChequeEspecial(getSaldo() - valor);
             System.out.println("Saque realizado com cheque especial");
-            return true;
         }
-        System.out.println("Nao foi possivel sacar mesmo com a utilizacao do cheque especial");
-        return false;
-    }
-
-    @Override
-    public boolean depositar(Double valor) {
-        return false;
-    }
-
-    @Override
-    public boolean transferir(Conta conta, Double valor) {
-        if (valor > 0 && getSaldo() - valor > 0) {
-            this.setSaldo(getSaldo() - valor);
-            conta.setSaldo(conta.getSaldo() + valor);
-
-            System.out.println("Tranferencia realizada sem cheque");
-            return true;
-
+        else {
+            System.out.println("Nao foi possivel sacar mesmo com a utilizacao do cheque especial");
         }
-        if (valor > 0 &&  retornarSaldoComChequeEspecial() - valor > 0) {
-            this.setSaldo(getSaldo() - valor);
-            chequeEspecial += getSaldo() - valor;
-            conta.setSaldo(conta.getSaldo() + valor);
-            System.out.println("Tranferencia realizada com cheque");
-            return true;
-        }
-        System.out.println("Tranferencia nao realizada: Valor inválido");
-        return false;
     }
 
 

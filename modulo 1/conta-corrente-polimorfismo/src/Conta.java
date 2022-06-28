@@ -44,34 +44,29 @@ public abstract class  Conta implements Movimentacao{
     }
 
     @Override
-    public boolean depositar(Double valor) {
+    public void depositar(Double valor) {
         if(valor>0){
             setSaldo(getSaldo()+valor);
             System.out.println("Deposito realizado com sucesso");
-            return true;
+            return;
         }
         System.out.println("Deposito nao foi realizado");
-        return false;
     }
 
     @Override
-    public boolean sacar(Double valor) {
+    public void sacar(Double valor) {
         if(valor>0 && getSaldo()-valor >0 ){
             setSaldo(getSaldo()-valor);
             System.out.println("Foi possivel sacar sem cheque especial");
-            return true;
         }
-        return false;
     }
 
     @Override
-    public boolean transferir(Conta conta, Double valor) {
+    public void transferir(Conta conta, Double valor) {
         System.out.println("Tranferencia realizada sem cheque");
         if (valor>0 && getSaldo()-valor >0 ){
-            this.setSaldo(getSaldo()-valor);
-            conta.setSaldo(conta.getSaldo()+valor);
-            return  true;
+            this.sacar(getSaldo()-valor);
+            conta.depositar(conta.getSaldo()+valor);
         }
-        return false;
     }
 }

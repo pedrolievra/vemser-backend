@@ -1,74 +1,61 @@
-public class ContaCorrente extends Conta {
-    double chequeEspecial;
+public class ContaCorrente {
+    public Cliente cliente;
+    public String numeroConta;
+    public String agencia;
+    public double saldo;
+    public double chequeEspecial;
 
-    public ContaCorrente(Cliente cliente, String numeroDaConta, int agencia, double saldo, double chequeEspecial){
-        super(cliente, numeroDaConta, agencia, saldo);
+    public void imprimirConta(){
+        System.out.println("\n-CONTA-");
+        System.out.println("Agencia: " + agencia + "\nNumero da conta: " + numeroConta + "\nSaldo: " + saldo+
+                "\nCheque Especial: " + chequeEspecial);
     }
 
-    void imprimirContaCorrente() {
-        System.out.println("--Dados do Cliente--");
-        getCliente().imprimirCliente();
-        System.out.println(" ");
-        getCliente().imprimirEnderecos();
-        System.out.println(" ");
-        getCliente().imprimirContatos();
-        System.out.println("Conta Corrente");
-        System.out.println("Numero da Conta: " + getNumeroDaConta());
-        System.out.println("Agencia: " + getAgencia());
-        System.out.println("Saldo: " + getSaldo());
-        System.out.println("Valor do Cheque Especial: " + chequeEspecial);
-        System.out.println(" ");
+    public boolean sacar(double valor){
+        if (saldo>=valor && valor>0){
+            System.out.println("-TRANSFERENCIA REALIZADA COM SUCESSO");
+            saldo -= valor;
+            return true;
+        }
+        else if (((saldo + chequeEspecial) >= valor) && (valor > saldo) && (valor != 0)){
+            System.out.println("-TRANSFERENCIA REALIZADA COM SUCESSO - COM CHEQUE ESPECIAL");
+            saldo -= valor;
+            chequeEspecial += valor;
+            return true;
+        }
+        else if(valor<=0) {
+            System.out.println("\n-VALOR INVALIDO. FAVOR REENSERIR O VALOR");
+            return false;
+        }
+        else {
+            System.out.print("-OPERACAO NAO REALIZADA: VALOR DE SAQUE EXTRAPOLA SALDO + CHEQUE ESPECIAL");
+            return false;
+        }
     }
 
-    boolean sacar(double valorDeSaque) {
-        if (this.getSaldo() >= valorDeSaque && valorDeSaque > 0) {
-            double saldo = getSaldo();
-            setSaldo(saldo -= valorDeSaque); //incluir cheque especial
-            System.out.println("Transferencia realizada");
-            return true;
+    public boolean depositar(double valor){
+        if(valor>0){
+            saldo+=valor;
         }
-        else if((chequeEspecial+getSaldo()>=valorDeSaque && valorDeSaque>0)) {
-            double saldo = getSaldo();
-            chequeEspecial -= getSaldo()-valorDeSaque;
-            setSaldo(saldo -= valorDeSaque);
-            System.out.println("Transferencia realizada com cheque especial");
-            return true;
+        else {
+            System.out.println("-NAO FOI POSSIVEL DEPOSITAR: VALOR NEGATIVO");
         }
-        System.out.println("Transferencia não foi realizada");
-        return false;
+    return false;
     }
 
-    boolean depositar(double valorDeDeposito) {
-        if (valorDeDeposito > 0) {
-            double saldo = getSaldo();
-            setSaldo(saldo += valorDeDeposito);
-            return true;
-        } else {
-            System.out.println("Erro ao fazer depósito");
-        }
-        return false;
+    public double retornoSaldoComChequeEspecial(){
+        System.out.println("SALDO + CHEQUE: " + (this.saldo+this.chequeEspecial));
+        return this.saldo+this.chequeEspecial;
     }
 
-    boolean transferir(ContaCorrente contaCorrente, double valorDeTransferencia){
-
-        if(valorDeTransferencia<=this.getSaldo() && valorDeTransferencia>0){
-            double saldo = this.getSaldo();
-            saldo -= valorDeTransferencia;
-            contaCorrente.setSaldo(saldo += valorDeTransferencia);
-            System.out.println("Transferencia realizada com sucesso");//tem que ser maior que 0 a transferencia e desconta tbm o saque especial caso seja necessario
-            return true;
+    public boolean transferir(ContaCorrente contaCorrente, double valor){
+        if (valor>0 && saldo>valor){
+            System.out.println("-TRANSFERENCIA REALIZADA COM SUCESSO");
+            contaCorrente.saldo = saldo - valor;
         }
-
-        else if (this.getSaldo()+chequeEspecial>=valorDeTransferencia && valorDeTransferencia>0){
-            this.chequeEspecial += this.getSaldo()-valorDeTransferencia;
-            System.out.println(this.getSaldo()-valorDeTransferencia);
-            double saldo = this.getSaldo();
-            saldo -= valorDeTransferencia;
-            contaCorrente.setSaldo(saldo += valorDeTransferencia);
-            System.out.println("Transferencia realizada com cheque especial");
-            return true;
+        if (valor <= 0){
+            System.out.println("-TRANFERENCIA NAO REALIZADA: VALOR INVALIDO");
         }
-        System.out.println("Transferencia nao realizada");
         return false;
     }
 }

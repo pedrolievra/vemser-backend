@@ -11,21 +11,6 @@ public class ContaPoupanca extends Conta implements  Impressao{
 
 
     @Override
-    public boolean sacar(Double valor) {
-        return false;
-    }
-
-    @Override
-    public boolean depositar(Double valor) {
-        return false;
-    }
-
-    @Override
-    public boolean transferir(Conta conta, Double valor) {
-        return false;
-    }
-
-    @Override
     public void imprimir() {
         getCliente().imprimirCliente();
         System.out.println(" Numero da Conta: "+ getNumeroConta() +" Agencia: "+getAgencia()+"Saldo:"+getSaldo());

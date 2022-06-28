@@ -1,19 +1,20 @@
-public class ContaPoupanca extends Conta implements  Impressao{
-    private static final double JUROS_MENSAIS = 1.01;
+public class ContaPoupanca extends Conta implements Impressao{
+    public static final double JUROS_MENSAIS = 1.01;
 
-    public ContaPoupanca(Cliente cliente, String numeroConta, String agencia, double saldo) {
-        super(cliente, numeroConta, agencia, saldo);
+    public ContaPoupanca(Cliente cliente, String agencia, String numeroDaConta, Double saldo){
+        super(cliente, agencia, numeroDaConta, saldo);
     }
 
-    void creditarTaxa(){
-        System.out.println("Taxa");
-        setSaldo(getSaldo()*JUROS_MENSAIS);
+    public void creditarTaxa(){
+        this.setSaldo(getSaldo() * JUROS_MENSAIS);
     }
 
     @Override
     public void imprimir() {
-        getCliente().imprimirCliente();
-        System.out.println(" Numero da Conta: "+ getNumeroConta() +" Agencia: "+getAgencia()+"Saldo:"+getSaldo() + "\n");
-
+        this.getCliente().imprimirCliente();
+        System.out.println("-CONTA POUPANÇA-\nAgência: " + this.getAgencia() + "\nConta: " + this.getNumeroConta() + "\nSaldo: " + this.getSaldo());
+        System.out.println("");
+        this.getCliente().imprimirContatos();
+        this.getCliente().imprimirEnderecos();
     }
 }

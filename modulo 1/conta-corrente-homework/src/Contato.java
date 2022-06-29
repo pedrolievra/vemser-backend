@@ -12,7 +12,6 @@ public class Contato {
         }
         else {
             System.out.println("Tipo inválido\nTelefone: " + telefone + "\nDescricao: " + descricao);
-
         }
     }
 }

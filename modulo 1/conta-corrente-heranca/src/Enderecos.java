@@ -1,12 +1,12 @@
 public class Enderecos {
-    public int tipo;
-    public String logradouro;
-    public String complemento;
-    public String cep;
-    public String cidade;
-    public String estado;
-    public String pais;
-    public int numero;
+    private int tipo;
+    private String logradouro;
+    private String complemento;
+    private  String cep;
+    private  String cidade;
+    private  String estado;
+    private  String pais;
+    private  int numero;
 
     public Enderecos(int tipo, String logradouro, String complemento, String cep, String cidade, String estado, String pais, int numero) {
         this.tipo = tipo;

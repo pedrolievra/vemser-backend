@@ -20,7 +20,7 @@ public class Cliente {
 
     public void imprimirEnderecos() {
         for (int i = 0; i < enderecos.length; i++) {
-            if (enderecos[i] != null) {
+            if (enderecos[i] != null) { //verificando valores nulos
                 System.out.println("\n-ENDERECO-");
                 enderecos[i].imprimirEndereco();
                 System.out.println("");
@@ -31,7 +31,7 @@ public class Cliente {
     }
         public void imprimirContatos () {
             for (int i = 0; i < contatos.length; i++) {
-                if (contatos[i] != null) {
+                if (contatos[i] != null) { //verificando valores nulos
                     System.out.println("\n-CONTATO-");
                     contatos[i].imprimirContato();
                 } else {

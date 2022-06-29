@@ -1,7 +1,7 @@
 public class Contato {
-    public String descricao;
-    public String telefone;
-    public int tipo;
+    private  String descricao;
+    private  String telefone;
+    private  int tipo;
 
     public Contato(String descricao, String telefone, int tipo) {
         this.descricao = descricao;

@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0e07cab-4eb2-4d7d-ae3e-bfabb24205d7" name="Changes" comment="" />
+    <list default="true" id="e0e07cab-4eb2-4d7d-ae3e-bfabb24205d7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/conta-corrente-heranca.iws" beforeDir="false" afterPath="$PROJECT_DIR$/conta-corrente-heranca.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Contato.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Contato.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Enderecos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Enderecos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo2/homework_1.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../modulo2/homework_1.sql" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

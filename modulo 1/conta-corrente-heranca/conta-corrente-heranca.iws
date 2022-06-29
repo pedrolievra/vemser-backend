@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0e07cab-4eb2-4d7d-ae3e-bfabb24205d7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/conta-corrente-heranca.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/conta-corrente-heranca.ipr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conta-corrente-heranca.iws" beforeDir="false" afterPath="$PROJECT_DIR$/conta-corrente-heranca.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conta-corrente-homework/conta-corrente-homework.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/../conta-corrente-homework/conta-corrente-homework.ipr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conta-corrente-homework/conta-corrente-homework.iws" beforeDir="false" afterPath="$PROJECT_DIR$/../conta-corrente-homework/conta-corrente-homework.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conta-corrente-homework/out/production/conta-corrente-homework/ContaCorrente.class" beforeDir="false" afterPath="$PROJECT_DIR$/../conta-corrente-homework/out/production/conta-corrente-homework/ContaCorrente.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conta-corrente-homework/out/production/conta-corrente-homework/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../conta-corrente-homework/out/production/conta-corrente-homework/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conta-corrente-homework/src/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/../conta-corrente-homework/src/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conta-corrente-homework/src/ContaCorrente.java" beforeDir="false" afterPath="$PROJECT_DIR$/../conta-corrente-homework/src/ContaCorrente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conta-corrente-homework/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../conta-corrente-homework/src/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="e0e07cab-4eb2-4d7d-ae3e-bfabb24205d7" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

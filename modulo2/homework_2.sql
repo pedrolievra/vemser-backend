@@ -80,7 +80,7 @@ CREATE SEQUENCE SEQ_BAIRRO
 START WITH 1
 INCREMENT BY 1
 SELECT * FROM VEMSER_PEDRO.BAIRRO;
-DELETE FROM VEMSER_PEDRO.BAIRRO WHERE ID_BAIRRO =21;
+DELETE FROM VEMSER_PEDRO.BAIRRO WHERE ID_BAIRRO = 18;
 
 INSERT INTO VEMSER_PEDRO.BAIRRO(id_bairro, id_cidade, id_estado, nome)
 VALUES(SEQ_BAIRRO.nextVal, 1, 1, 'Tancredo Neves');
@@ -124,12 +124,14 @@ CREATE TABLE VEMSER_PEDRO.ENDERECO (
   id_endereco NUMBER(38,0) NOT NULL,
   id_bairro NUMBER(38,0) NOT NULL,
   id_cidade NUMBER(38, 0) NOT NULL,
+  logradouro VARCHAR(255) NOT NULL,
   numero NUMBER(38,0) NOT NULL,
   complemento VARCHAR2(100),
   cep CHAR(9),
   PRIMARY KEY(id_endereco),
   CONSTRAINT FK_ENDERECO_BAIRRO FOREIGN KEY (ID_BAIRRO, ID_CIDADE) REFERENCES VEMSER_PEDRO.BAIRRO (ID_BAIRRO, ID_CIDADE)
 );
+
 
 SELECT * FROM VEMSER_PEDRO.CIDADE;
 SELECT * FROM VEMSER_PEDRO.BAIRRO;
@@ -138,90 +140,99 @@ CREATE SEQUENCE SEQ_ENDERECO
 START WITH 1
 INCREMENT BY 1
 
-INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, numero, complemento, cep)
-VALUES(SEQ_ENDERECO.nextVal, 1, 1, 9, 'Rua Meu Deus', '2177-303');
-INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, numero, complemento, cep)
-VALUES(SEQ_ENDERECO.nextVal, 1, 1, 9, 'Rua Meu Deus', '2177-303');
+INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, logradouro, numero, complemento, cep)
+VALUES(SEQ_ENDERECO.nextVal, 1, 1, 'Rua Meu Deus', 9, 'Proximo a rua 1' , '2177-303');
+INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, logradouro, numero, complemento, cep)
+VALUES(SEQ_ENDERECO.nextVal, 1, 1,'Rua Meu Deus', 89, 'Fabrica',  '2177-303');
 
-INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, numero, complemento, cep)
-VALUES(SEQ_ENDERECO.nextVal, 6, 1, 11, 'Rua Mds', '2277-303');
-INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, numero, complemento, cep)
-VALUES(SEQ_ENDERECO.nextVal, 6, 1, 69, 'Rua Jesus', '3453-303');
+INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, logradouro, numero, complemento, cep)
+VALUES(SEQ_ENDERECO.nextVal, 6, 1,  'Rua Mds',11, 'Escolinha', '2277-303');
+INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, logradouro, numero, complemento, cep)
+VALUES(SEQ_ENDERECO.nextVal, 6, 1,  'Rua Jesus',69,'Supermercado', '3453-303');
 
-INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, numero, complemento, cep)
-VALUES(SEQ_ENDERECO.nextVal, 10, 5, 12, 'Rua Jeova', '9117-303');
-INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, numero, complemento, cep)
-VALUES(SEQ_ENDERECO.nextVal, 10, 5, 9, 'Rua Alah', '4577-303');
+INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, logradouro, numero, complemento, cep)
+VALUES(SEQ_ENDERECO.nextVal, 10, 5,  'Rua Jeova',12,'Zoo', '9117-303');
+INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, logradouro, numero, complemento, cep)
+VALUES(SEQ_ENDERECO.nextVal, 10, 5,  'Rua Alah',9,'Igreja', '4577-303');
 
-INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, numero, complemento, cep)
-VALUES(SEQ_ENDERECO.nextVal, 11, 6, 13, 'Rua Luz da Manha', '6667-303');
-INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, numero, complemento, cep)
-VALUES(SEQ_ENDERECO.nextVal, 11, 6, 12, 'Rua Bismuto', '7777-303');
+INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, logradouro, numero, complemento, cep)
+VALUES(SEQ_ENDERECO.nextVal, 11, 6,  'Rua Luz da Manha',13,'Escola', '6667-303');
+INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, logradouro, numero, complemento, cep)
+VALUES(SEQ_ENDERECO.nextVal, 11, 6,  'Rua Bismuto',12,'Trilha', '7777-303');
 
-INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, numero, complemento, cep)
-VALUES(SEQ_ENDERECO.nextVal, 12, 7, 14, 'Rua Steven', '0177-303');
-INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, numero, complemento, cep)
-VALUES(SEQ_ENDERECO.nextVal, 12, 7, 22, 'Rua Diamante Branco', '317-303');
+INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, logradouro, numero, complemento, cep)
+VALUES(SEQ_ENDERECO.nextVal, 12, 7,  'Rua Steven',14,'Delegacia', '0177-303');
+INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, logradouro, numero, complemento, cep)
+VALUES(SEQ_ENDERECO.nextVal, 12, 7,  'Rua Diamante Branco',22,'Mar', '317-303');
 
-INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, numero, complemento, cep)
-VALUES(SEQ_ENDERECO.nextVal, 13, 8, 55, 'Rua Rosa', '1117-303');
-INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, numero, complemento, cep)
-VALUES(SEQ_ENDERECO.nextVal, 13, 8, 56, 'Rua Blue Diamond', '3147-303');
+INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, logradouro, numero, complemento, cep)
+VALUES(SEQ_ENDERECO.nextVal, 13, 8,  'Rua Rosa', 55,'Praia','1117-303');
+INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, logradouro, numero, complemento, cep)
+VALUES(SEQ_ENDERECO.nextVal, 13, 8,  'Rua Blue Diamond', 56,'Farmacia','3147-303');
 
-INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, numero, complemento, cep)
-VALUES(SEQ_ENDERECO.nextVal, 14, 8, 66, 'Rua White', '1117-303');
-INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, numero, complemento, cep)
-VALUES(SEQ_ENDERECO.nextVal, 14, 8, 77, 'Rua Ametista', '37890-303');
+INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, logradouro, numero, complemento, cep)
+VALUES(SEQ_ENDERECO.nextVal, 14, 8,  'Rua White',66,'Arquibancada', '1117-303');
+INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, logradouro, numero, complemento, cep)
+VALUES(SEQ_ENDERECO.nextVal, 14, 8,  'Rua Ametista',77,'Bar', '37890-303');
 
-INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, numero, complemento, cep)
-VALUES(SEQ_ENDERECO.nextVal, 15, 7, 77, 'Rua Perola', '2217-303');
-INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, numero, complemento, cep)
-VALUES(SEQ_ENDERECO.nextVal, 15, 7, 112, 'Rua Garnet', '0047-303');
+INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, logradouro, numero, complemento, cep)
+VALUES(SEQ_ENDERECO.nextVal, 15, 7,  'Rua Perola',77,'Loja', '2217-303');
+INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, logradouro, numero, complemento, cep)
+VALUES(SEQ_ENDERECO.nextVal, 15, 7,  'Rua Garnet',112,'Shopping', '0047-303');
 
-INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, numero, complemento, cep)
-VALUES(SEQ_ENDERECO.nextVal, 16, 5, 134, 'Rua Bob', '2227-303');
-INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, numero, complemento, cep)
-VALUES(SEQ_ENDERECO.nextVal, 16, 5, 090, 'Rua Patrick', '6666-303');
+INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, logradouro, numero, complemento, cep)
+VALUES(SEQ_ENDERECO.nextVal, 16, 5,  'Rua Bob', 134,'Bosque','2227-303');
+INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, logradouro, numero, complemento, cep)
+VALUES(SEQ_ENDERECO.nextVal, 16, 5,  'Rua Patrick',090,'Mata', '6666-303');
 
-INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, numero, complemento, cep)
-VALUES(SEQ_ENDERECO.nextVal, 17, 6, 3333, 'Rua Lula Molusco', '9922-303');
-INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, numero, complemento, cep)
-VALUES(SEQ_ENDERECO.nextVal, 17, 6, 322222, 'Rua Seu Sirigueijo Porco Capitalista', '4222-303');
+INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, logradouro, numero, complemento, cep)
+VALUES(SEQ_ENDERECO.nextVal, 17, 6,  'Rua Lula Molusco',3333,'Escadao', '9922-303');
+INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, logradouro, numero, complemento, cep)
+VALUES(SEQ_ENDERECO.nextVal, 17, 6,  'Rua Seu Sirigueijo',322222,'Rodovia', '4222-303');
 
-INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, numero, complemento, cep)
-VALUES(SEQ_ENDERECO.nextVal, 18, 2, 151115, 'Rua Perola Filha', '4002-303');
-INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, numero, complemento, cep)
-VALUES(SEQ_ENDERECO.nextVal, 18, 2, 176666, 'Rua Professora Peixe', '1111-303');
+INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, logradouro, numero, complemento, cep)
+VALUES(SEQ_ENDERECO.nextVal, 18, 2,  'Rua Perola Filha',151115, 'Avenida','4002-300');
+INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, logradouro, numero, complemento, cep)
+VALUES(SEQ_ENDERECO.nextVal, 18, 2, 'Rua Professora Peixe', 176666,'Viela', '1111-300');
 
-INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, numero, complemento, cep)
-VALUES(SEQ_ENDERECO.nextVal, 18, 2, 155, 'Rua Plankton', '0017-303');
-INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, numero, complemento, cep)
-VALUES(SEQ_ENDERECO.nextVal, 18, 2, 156, 'Rua Balde de Lixo', '9847-303');
+DELETE FROM VEMSER_PEDRO.ENDERECO WHERE id_bairro = 18;
+INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, logradouro, numero, complemento, cep)
+VALUES(SEQ_ENDERECO.nextVal, 19, 4,  'Rua Winx',555,'Base', '0987-303');
+INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, logradouro, numero, complemento, cep)
+VALUES(SEQ_ENDERECO.nextVal, 19, 4,  'Rua Bloom',756,'Campo', '6547-303');
 
-INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, numero, complemento, cep)
-VALUES(SEQ_ENDERECO.nextVal, 19, 4, 555, 'Rua Winx', '0987-303');
-INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, numero, complemento, cep)
-VALUES(SEQ_ENDERECO.nextVal, 19, 4, 756, 'Rua Bloom', '6547-303');
+INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, logradouro, numero, complemento, cep)
+VALUES(SEQ_ENDERECO.nextVal, 22, 3,  'Rua Palmito',55,'Arena', '1117-303');
+INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, logradouro, numero, complemento, cep)
+VALUES(SEQ_ENDERECO.nextVal, 22, 3,  'Rua Digital',56,'Quadra', '3147-303');
 
-INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, numero, complemento, cep)
-VALUES(SEQ_ENDERECO.nextVal, 22, 3, 55, 'Rua Palmito', '1117-303');
-INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, numero, complemento, cep)
-VALUES(SEQ_ENDERECO.nextVal, 22, 3, 56, 'Rua Digital', '3147-303');
+INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, logradouro, numero, complemento, cep)
+VALUES(SEQ_ENDERECO.nextVal, 23, 3, 'Rua Company',575,'Milharal',  '1897-303');
+INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, logradouro, numero, complemento, cep)
+VALUES(SEQ_ENDERECO.nextVal, 23, 3,  'Rua Brazilian',456,'Horta', '3109-303');
 
-INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, numero, complemento, cep)
-VALUES(SEQ_ENDERECO.nextVal, 23, 3, 575, 'Rua Company', '1897-303');
-INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, numero, complemento, cep)
-VALUES(SEQ_ENDERECO.nextVal, 23, 3, 456, 'Rua Brazilian', '3109-303');
+INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, logradouro, numero, complemento, cep)
+VALUES(SEQ_ENDERECO.nextVal, 24, 2,  'Rua Pai',4555,'Balneario', '8717-303');
+INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, logradouro, numero, complemento, cep)
+VALUES(SEQ_ENDERECO.nextVal, 24, 2,  'Rua Mae',5326,'Cachoeira', '4347-303');
 
-INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, numero, complemento, cep)
-VALUES(SEQ_ENDERECO.nextVal, 24, 2, 4555, 'Rua Pai', '8717-303');
-INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, numero, complemento, cep)
-VALUES(SEQ_ENDERECO.nextVal, 24, 2, 5326, 'Rua Mae', '4347-303');
+INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, logradouro, numero, complemento, cep)
+VALUES(SEQ_ENDERECO.nextVal, 25, 2, 'Rua Mario',3255,'Rodoviaria',  '4517-303');
+INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, logradouro, numero, complemento, cep)
+VALUES(SEQ_ENDERECO.nextVal, 25, 2,  'Rua Bowser',3256,'Terminal de onibus', '3122-303');
 
-INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, numero, complemento, cep)
-VALUES(SEQ_ENDERECO.nextVal, 25, 2, 3255, 'Rua Mario', '4517-303');
-INSERT INTO VEMSER_PEDRO.ENDERECO(id_endereco, id_bairro, id_cidade, numero, complemento, cep)
-VALUES(SEQ_ENDERECO.nextVal, 25, 2, 3256, 'Rua Bowser', '3122-303');
+--SELECIONAR TODOS OS PAISES ORDENADOS POR NOME DECRESCENTE
+SELECT * FROM VEMSER_PEDRO.PAIS ORDER BY NOME DESC
+--SELECIONAR LOGRADOURO E CEP DOS ENDERECOS, SOMENTE OS QUE COMECEM COM "A"
+SELECT logradouro, cep FROM VEMSER_PEDRO.ENDERECO WHERE logradouro LIKE UPPER ('a%')
+--SELECIONAR TODOS OS ENDERECOS QUE TEM CEP QUE TERMINEM COM 0
+SELECT * FROM VEMSER_PEDRO.ENDERECO WHERE cep LIKE '%0';
+--SELECIONAR TODOS OS ENDERECOS QUE TENHAM NUMEROS DE 1 A 100
+SELECT * FROM VEMSER_PEDRO.ENDERECO WHERE numero BETWEEN 1 AND 100
+--SELECIONAR TODOS OS ENDERECOS QUE COMECEM COM "RUA" E ORDENAR PELO CEP DE FORMA DECRESCENTE
+SELECT * FROM VEMSER_PEDRO.ENDERECO WHERE logradouro LIKE 'Rua%' ORDER BY cep DESC
+--SELECIONA A QUANTIDADE DE ENDERECOS CADASTRADOS NA TABELA
+SELECT COUNT (id_endereco) FROM VEMSER_PEDRO.ENDERECO
+--SELECIONA A QUANTIDADE DE ENDERECOS CADASTRADOS AGRUPADOS PELO ID DA CIDADE
+SELECT COUNT(ID_ENDERECO) FROM VEMSER_PEDRO.ENDERECO GROUP BY ID_CIDADE
 
-SELECT VEMSER_PEDRO.PAIS, NOME FROM VEMSER_PEDRO.PAIS
-ORDER BY NOME

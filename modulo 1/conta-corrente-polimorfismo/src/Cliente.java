@@ -63,7 +63,6 @@ public class Cliente {
     }
 
     public ArrayList<Contato> getContatos() {
-        return contatos;
     }
 
     public void setContatos(ArrayList<Contato> contatos) {

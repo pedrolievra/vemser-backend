@@ -3,9 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="e0e07cab-4eb2-4d7d-ae3e-bfabb24205d7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/conta-corrente-heranca.iws" beforeDir="false" afterPath="$PROJECT_DIR$/conta-corrente-heranca.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/conta-corrente-heranca/Contato.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/conta-corrente-heranca/Contato.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/conta-corrente-heranca/Enderecos.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/conta-corrente-heranca/Enderecos.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cliente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Contato.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Contato.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Enderecos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Enderecos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../conta-corrente-homework/conta-corrente-homework.iws" beforeDir="false" afterPath="$PROJECT_DIR$/../conta-corrente-homework/conta-corrente-homework.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../conta-corrente-homework/src/Contato.java" beforeDir="false" afterPath="$PROJECT_DIR$/../conta-corrente-homework/src/Contato.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../modulo2/homework_1.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../modulo2/homework_1.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +50,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../conta-corrente-homework" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />

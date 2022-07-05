@@ -1,0 +1,240 @@
+{
+	"info": {
+		"_postman_id": "f28c9936-2842-4ff6-b681-dd609a6a277e",
+		"name": "homework1_2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21782422"
+	},
+	"item": [
+		{
+			"name": "PESSOA",
+			"item": [
+				{
+					"name": "GET PESSOA",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://back-vemserdbc.herokuapp.com/pessoa/",
+							"protocol": "https",
+							"host": [
+								"back-vemserdbc",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"pessoa",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST PESSOA",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"nome\": \"Pedro Oliveira\",\r\n        \"dataNascimento\": \"2001-10-26\",\r\n        \"cpf\": \"131313131313\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://back-vemserdbc.herokuapp.com/pessoa/",
+							"protocol": "https",
+							"host": [
+								"back-vemserdbc",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"pessoa",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT PESSOA",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"idPessoa\": 14,\r\n        \"nome\": \"Pedro Victor dos Santos Oliveira\",\r\n        \"dataNascimento\": \"2001-10-26\",\r\n        \"cpf\": \"134044131313\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://back-vemserdbc.herokuapp.com/pessoa/14",
+							"protocol": "https",
+							"host": [
+								"back-vemserdbc",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"pessoa",
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE PESSOA",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://back-vemserdbc.herokuapp.com/pessoa/18",
+							"protocol": "https",
+							"host": [
+								"back-vemserdbc",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"pessoa",
+								"18"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CONTATO",
+			"item": [
+				{
+					"name": "GET CONTATO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://back-vemserdbc.herokuapp.com/contato/",
+							"protocol": "https",
+							"host": [
+								"back-vemserdbc",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"contato",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST - CONTATO",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"idContato\": 5,\r\n        \"idPessoa\": 14,\r\n        \"tipoContato\": \"Residencial\",\r\n        \"numero\": \"051998657777\",\r\n        \"descricao\": \"Viber\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://back-vemserdbc.herokuapp.com/contato/",
+							"protocol": "https",
+							"host": [
+								"back-vemserdbc",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"contato",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT - CONTATO",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"idContato\": 5,\r\n        \"idPessoa\": 14,\r\n        \"tipoContato\": \"Residencial\",\r\n        \"numero\": \"051998657777\",\r\n        \"descricao\": \"Whatsapp\"\r\n    }"
+						},
+						"url": {
+							"raw": "https://back-vemserdbc.herokuapp.com/contato/5",
+							"protocol": "https",
+							"host": [
+								"back-vemserdbc",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"contato",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE - CONTATO",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://back-vemserdbc.herokuapp.com/contato/5",
+							"protocol": "https",
+							"host": [
+								"back-vemserdbc",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"contato",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET 2 - CONTATO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://back-vemserdbc.herokuapp.com/contato/14",
+							"protocol": "https",
+							"host": [
+								"back-vemserdbc",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"contato",
+								"14"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

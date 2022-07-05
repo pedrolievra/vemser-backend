@@ -37,7 +37,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "    {\r\n        \"nome\": \"Pedro Oliveira\",\r\n        \"dataNascimento\": \"2001-10-26\",\r\n        \"cpf\": \"131313131313\"\r\n    }",
+							"raw": "    {\r\n        \"nome\": \"Pedro Victor dos Santos Oliveira\",\r\n        \"dataNascimento\": \"2001-10-26\",\r\n        \"cpf\": \"131313131313\"\r\n    }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -67,7 +67,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "    {\r\n        \"idPessoa\": 14,\r\n        \"nome\": \"Pedro Victor dos Santos Oliveira\",\r\n        \"dataNascimento\": \"2001-10-26\",\r\n        \"cpf\": \"134044131313\"\r\n    }",
+							"raw": "    {\r\n        \"nome\": \"Pedro Oliveira\",\r\n        \"dataNascimento\": \"2001-10-26\",\r\n        \"cpf\": \"134044131313\"\r\n    }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -75,7 +75,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://back-vemserdbc.herokuapp.com/pessoa/14",
+							"raw": "https://back-vemserdbc.herokuapp.com/pessoa/6",
 							"protocol": "https",
 							"host": [
 								"back-vemserdbc",
@@ -84,7 +84,7 @@
 							],
 							"path": [
 								"pessoa",
-								"14"
+								"6"
 							]
 						}
 					},
@@ -96,7 +96,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "https://back-vemserdbc.herokuapp.com/pessoa/18",
+							"raw": "https://back-vemserdbc.herokuapp.com/pessoa/8",
 							"protocol": "https",
 							"host": [
 								"back-vemserdbc",
@@ -105,7 +105,7 @@
 							],
 							"path": [
 								"pessoa",
-								"18"
+								"8"
 							]
 						}
 					},
@@ -144,7 +144,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "      {\r\n        \"idPessoa\": 4,\r\n        \"tipoContato\": \"RESIDENCIAL\",\r\n        \"numero\": \"929292929212\",\r\n        \"descricao\": \"whatsapp\"\r\n    }",
+							"raw": "      {\r\n        \"idPessoa\": 4,\r\n        \"tipoContato\": \"COMERCIAL\",\r\n        \"numero\": \"929292929212\",\r\n        \"descricao\": \"viber\"\r\n    }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -152,7 +152,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://back-vemserdbc.herokuapp.com/contato/4",
+							"raw": "https://back-vemserdbc.herokuapp.com/contato/1",
 							"protocol": "https",
 							"host": [
 								"back-vemserdbc",
@@ -161,7 +161,7 @@
 							],
 							"path": [
 								"contato",
-								"4"
+								"1"
 							]
 						}
 					},
@@ -174,7 +174,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "    {\r\n        \"idPessoa\": 2,\r\n        \"idContato\": 12,\r\n        \"tipoContato\": \"RESIDENCIAL\",\r\n        \"numero\": \"5151515151\",\r\n        \"descricao\": \"Line\"\r\n    }",
+							"raw": "    {\r\n        \"idPessoa\": 4,\r\n        \"idContato\": 6,\r\n        \"tipoContato\": \"COMERCIAL\",\r\n        \"numero\": \"5151515151\",\r\n        \"descricao\": \"Line\"\r\n    }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -182,7 +182,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://back-vemserdbc.herokuapp.com/contato/12",
+							"raw": "https://back-vemserdbc.herokuapp.com/contato/6",
 							"protocol": "https",
 							"host": [
 								"back-vemserdbc",
@@ -191,7 +191,7 @@
 							],
 							"path": [
 								"contato",
-								"12"
+								"6"
 							]
 						}
 					},
@@ -203,7 +203,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "https://back-vemserdbc.herokuapp.com/contato/13",
+							"raw": "https://back-vemserdbc.herokuapp.com/contato/8",
 							"protocol": "https",
 							"host": [
 								"back-vemserdbc",
@@ -212,7 +212,7 @@
 							],
 							"path": [
 								"contato",
-								"13"
+								"8"
 							]
 						}
 					},

@@ -97,7 +97,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "https://jsonplaceholder.typicode.com/photos/1\n",
+							"raw": "https://jsonplaceholder.typicode.com/photos/1",
 							"protocol": "https",
 							"host": [
 								"jsonplaceholder",
@@ -106,7 +106,7 @@
 							],
 							"path": [
 								"photos",
-								"1\n"
+								"1"
 							]
 						}
 					},
@@ -473,7 +473,12 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": " {\r\n        \"name\": \"Joao \",\r\n        \"username\": \"Oliveira\",\r\n        \"email\": \"joaolievra@gmail.com\",\r\n        \"address\": {\r\n            \"street\": \"Rua Jacunda\",\r\n            \"suite\": \"898\",\r\n            \"city\": \"Manaus\",\r\n            \"zipcode\": \"69087-303\",\r\n            \"geo\": {\r\n                \"lat\": \"23.3159\",\r\n                \"lng\": \"54.1496\"\r\n            }\r\n        },\r\n        \"phone\": \"92992690849\",\r\n        \"website\": \"facebook.com\",\r\n        \"company\": {\r\n            \"name\": \"facebook\",\r\n            \"catchPhrase\": \"rede social\",\r\n            \"bs\": \"mais famosa do mundo\"\r\n        }\r\n }"
+							"raw": " {\r\n        \"name\": \"Joao \",\r\n        \"username\": \"Oliveira\",\r\n        \"email\": \"joaolievra@gmail.com\",\r\n        \"address\": {\r\n            \"street\": \"Rua Jacunda\",\r\n            \"suite\": \"898\",\r\n            \"city\": \"Manaus\",\r\n            \"zipcode\": \"69087-303\",\r\n            \"geo\": {\r\n                \"lat\": \"23.3159\",\r\n                \"lng\": \"54.1496\"\r\n            }\r\n        },\r\n        \"phone\": \"92992690849\",\r\n        \"website\": \"facebook.com\",\r\n        \"company\": {\r\n            \"name\": \"facebook\",\r\n            \"catchPhrase\": \"rede social\",\r\n            \"bs\": \"mais famosa do mundo\"\r\n        }\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
 						"url": {
 							"raw": "https://jsonplaceholder.typicode.com/todos/2",
